@@ -1,0 +1,20 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "gcp": "https://cloud.google.com/natural-language#",
+    "DocumentAnalysis": "gcp:DocumentAnalysis",
+    "document": "gcp:document",
+    "sentiment": "gcp:sentiment",
+    "entity": "gcp:entity",
+    "magnitude": "gcp:magnitude",
+    "score": "gcp:score",
+    "salience": "gcp:salience",
+    "languageCode": "gcp:languageCode",
+    "encodingType": "gcp:encodingType",
+    "category": "gcp:category",
+    "confidence": "gcp:confidence",
+    "name": "schema:name",
+    "description": "schema:description",
+    "url": "schema:url"
+  }
+}

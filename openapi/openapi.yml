@@ -1,0 +1,277 @@
+openapi: 3.1.0
+info:
+  title: Google Cloud Natural Language API
+  description: >-
+    Provides natural language understanding technologies to extract insights
+    from unstructured text including sentiment, entities, and syntax.
+  version: v1
+  contact:
+    name: Google Cloud
+    url: https://cloud.google.com/natural-language
+servers:
+  - url: https://language.googleapis.com/v1
+paths:
+  /documents:analyzeSentiment:
+    post:
+      operationId: analyzeSentiment
+      summary: Analyze sentiment
+      description: Analyzes the sentiment of the provided text.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AnalyzeSentimentRequest'
+      responses:
+        '200':
+          description: Successful sentiment analysis response.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AnalyzeSentimentResponse'
+  /documents:analyzeEntities:
+    post:
+      operationId: analyzeEntities
+      summary: Analyze entities
+      description: Finds named entities in the provided text.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AnalyzeEntitiesRequest'
+      responses:
+        '200':
+          description: Successful entity analysis response.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AnalyzeEntitiesResponse'
+  /documents:classifyText:
+    post:
+      operationId: classifyText
+      summary: Classify text
+      description: Classifies the provided document into content categories.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ClassifyTextRequest'
+      responses:
+        '200':
+          description: Successful text classification response.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ClassifyTextResponse'
+  /documents:analyzeSyntax:
+    post:
+      operationId: analyzeSyntax
+      summary: Analyze syntax
+      description: Analyzes the syntax of the provided text.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AnalyzeSyntaxRequest'
+      responses:
+        '200':
+          description: Successful syntax analysis response.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AnalyzeSyntaxResponse'
+  /documents:annotateText:
+    post:
+      operationId: annotateText
+      summary: Annotate text
+      description: Provides all available text analysis features in a single call.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AnnotateTextRequest'
+      responses:
+        '200':
+          description: Successful annotation response.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AnnotateTextResponse'
+components:
+  schemas:
+    Document:
+      type: object
+      properties:
+        type:
+          type: string
+          enum:
+            - TYPE_UNSPECIFIED
+            - PLAIN_TEXT
+            - HTML
+        content:
+          type: string
+        gcsContentUri:
+          type: string
+        language:
+          type: string
+    Sentiment:
+      type: object
+      properties:
+        magnitude:
+          type: number
+        score:
+          type: number
+    Entity:
+      type: object
+      properties:
+        name:
+          type: string
+        type:
+          type: string
+          enum:
+            - UNKNOWN
+            - PERSON
+            - LOCATION
+            - ORGANIZATION
+            - EVENT
+            - WORK_OF_ART
+            - CONSUMER_GOOD
+            - OTHER
+            - PHONE_NUMBER
+            - ADDRESS
+            - DATE
+            - NUMBER
+            - PRICE
+        salience:
+          type: number
+        sentiment:
+          $ref: '#/components/schemas/Sentiment'
+    AnalyzeSentimentRequest:
+      type: object
+      required:
+        - document
+      properties:
+        document:
+          $ref: '#/components/schemas/Document'
+        encodingType:
+          type: string
+    AnalyzeSentimentResponse:
+      type: object
+      properties:
+        documentSentiment:
+          $ref: '#/components/schemas/Sentiment'
+        language:
+          type: string
+        sentences:
+          type: array
+          items:
+            type: object
+    AnalyzeEntitiesRequest:
+      type: object
+      required:
+        - document
+      properties:
+        document:
+          $ref: '#/components/schemas/Document'
+        encodingType:
+          type: string
+    AnalyzeEntitiesResponse:
+      type: object
+      properties:
+        entities:
+          type: array
+          items:
+            $ref: '#/components/schemas/Entity'
+        language:
+          type: string
+    ClassifyTextRequest:
+      type: object
+      required:
+        - document
+      properties:
+        document:
+          $ref: '#/components/schemas/Document'
+    ClassifyTextResponse:
+      type: object
+      properties:
+        categories:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+              confidence:
+                type: number
+    AnalyzeSyntaxRequest:
+      type: object
+      required:
+        - document
+      properties:
+        document:
+          $ref: '#/components/schemas/Document'
+        encodingType:
+          type: string
+    AnalyzeSyntaxResponse:
+      type: object
+      properties:
+        sentences:
+          type: array
+          items:
+            type: object
+        tokens:
+          type: array
+          items:
+            type: object
+        language:
+          type: string
+    AnnotateTextRequest:
+      type: object
+      required:
+        - document
+        - features
+      properties:
+        document:
+          $ref: '#/components/schemas/Document'
+        features:
+          type: object
+          properties:
+            extractSyntax:
+              type: boolean
+            extractEntities:
+              type: boolean
+            extractDocumentSentiment:
+              type: boolean
+            extractEntitySentiment:
+              type: boolean
+            classifyText:
+              type: boolean
+        encodingType:
+          type: string
+    AnnotateTextResponse:
+      type: object
+      properties:
+        sentences:
+          type: array
+          items:
+            type: object
+        tokens:
+          type: array
+          items:
+            type: object
+        entities:
+          type: array
+          items:
+            $ref: '#/components/schemas/Entity'
+        documentSentiment:
+          $ref: '#/components/schemas/Sentiment'
+        language:
+          type: string
+        categories:
+          type: array
+          items:
+            type: object

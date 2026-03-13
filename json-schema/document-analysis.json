@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/google-cloud-natural-language/refs/heads/main/json-schema/document-analysis.json",
+  "title": "Document Analysis",
+  "description": "Schema for a Google Cloud Natural Language document analysis request.",
+  "type": "object",
+  "required": ["document"],
+  "properties": {
+    "document": {
+      "type": "object",
+      "description": "The document to analyze.",
+      "required": ["type"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["TYPE_UNSPECIFIED", "PLAIN_TEXT", "HTML"],
+          "description": "The type of the document."
+        },
+        "content": {
+          "type": "string",
+          "description": "The content of the document as a string."
+        },
+        "gcsContentUri": {
+          "type": "string",
+          "description": "Google Cloud Storage URI for the document content."
+        },
+        "language": {
+          "type": "string",
+          "description": "BCP-47 language code of the document."
+        }
+      }
+    },
+    "features": {
+      "type": "object",
+      "description": "The features to enable for analysis.",
+      "properties": {
+        "extractSyntax": {
+          "type": "boolean",
+          "description": "Extract syntax information."
+        },
+        "extractEntities": {
+          "type": "boolean",
+          "description": "Extract entities."
+        },
+        "extractDocumentSentiment": {
+          "type": "boolean",
+          "description": "Extract document-level sentiment."
+        },
+        "extractEntitySentiment": {
+          "type": "boolean",
+          "description": "Extract entity-level sentiment."
+        },
+        "classifyText": {
+          "type": "boolean",
+          "description": "Classify the document into categories."
+        }
+      }
+    },
+    "encodingType": {
+      "type": "string",
+      "enum": ["NONE", "UTF8", "UTF16", "UTF32"],
+      "description": "The encoding type for calculating offsets."
+    }
+  }
+}
