@@ -29,6 +29,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/AnalyzeSentimentResponse'
+      tags:
+        - documents:analyzeSentiment
   /documents:analyzeEntities:
     post:
       operationId: analyzeEntities
@@ -47,6 +49,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/AnalyzeEntitiesResponse'
+      tags:
+        - documents:analyzeEntities
   /documents:classifyText:
     post:
       operationId: classifyText
@@ -65,6 +69,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ClassifyTextResponse'
+      tags:
+        - documents:classifyText
   /documents:analyzeSyntax:
     post:
       operationId: analyzeSyntax
@@ -83,6 +89,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/AnalyzeSyntaxResponse'
+      tags:
+        - documents:analyzeSyntax
   /documents:annotateText:
     post:
       operationId: annotateText
@@ -101,6 +109,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/AnnotateTextResponse'
+      tags:
+        - documents:annotateText
 components:
   schemas:
     Document:
@@ -275,3 +285,9 @@ components:
           type: array
           items:
             type: object
+tags:
+  - name: documents:analyzeEntities
+  - name: documents:analyzeSentiment
+  - name: documents:analyzeSyntax
+  - name: documents:annotateText
+  - name: documents:classifyText

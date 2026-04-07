@@ -12,12 +12,12 @@ modified: '2026-03-16'
 specificationVersion: '0.19'
 type: Index
 tags:
-  - Natural Language Processing
-  - Sentiment Analysis
   - Entity Recognition
-  - Text Analysis
   - Google Cloud
   - Machine Learning
+  - Natural Language Processing
+  - Sentiment Analysis
+  - Text Analysis
 apis:
   - name: Google Cloud Natural Language API
     description: >-
@@ -26,9 +26,9 @@ apis:
     humanURL: https://cloud.google.com/natural-language
     baseURL: https://language.googleapis.com
     tags:
+      - Entity Recognition
       - Natural Language Processing
       - Sentiment Analysis
-      - Entity Recognition
     properties:
       - type: Documentation
         url: https://cloud.google.com/natural-language/docs/reference/rest
