@@ -14,7 +14,7 @@ paths:
   /documents:analyzeSentiment:
     post:
       operationId: analyzeSentiment
-      summary: Analyze sentiment
+      summary: Google Cloud Natural Language Analyze sentiment
       description: Analyzes the sentiment of the provided text.
       requestBody:
         required: true
@@ -32,7 +32,7 @@ paths:
   /documents:analyzeEntities:
     post:
       operationId: analyzeEntities
-      summary: Analyze entities
+      summary: Google Cloud Natural Language Analyze entities
       description: Finds named entities in the provided text.
       requestBody:
         required: true
@@ -50,7 +50,7 @@ paths:
   /documents:classifyText:
     post:
       operationId: classifyText
-      summary: Classify text
+      summary: Google Cloud Natural Language Classify text
       description: Classifies the provided document into content categories.
       requestBody:
         required: true
@@ -68,7 +68,7 @@ paths:
   /documents:analyzeSyntax:
     post:
       operationId: analyzeSyntax
-      summary: Analyze syntax
+      summary: Google Cloud Natural Language Analyze syntax
       description: Analyzes the syntax of the provided text.
       requestBody:
         required: true
@@ -86,7 +86,7 @@ paths:
   /documents:annotateText:
     post:
       operationId: annotateText
-      summary: Annotate text
+      summary: Google Cloud Natural Language Annotate text
       description: Provides all available text analysis features in a single call.
       requestBody:
         required: true
