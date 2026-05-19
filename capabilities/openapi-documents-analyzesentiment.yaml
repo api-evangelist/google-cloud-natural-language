@@ -1,0 +1,79 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Google Cloud Natural Language API — documents:analyzeSentiment
+  description: 'Google Cloud Natural Language API — documents:analyzeSentiment. 1 operations. Lead operation: Google Cloud
+    Natural Language Analyze sentiment. Self-contained Naftiko capability covering one Google Cloud Natural Language business
+    surface.'
+  tags:
+  - Google Cloud Natural Language
+  - documents:analyzeSentiment
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    GOOGLE_CLOUD_NATURAL_LANGUAGE_API_KEY: GOOGLE_CLOUD_NATURAL_LANGUAGE_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: openapi-documents-analyzesentiment
+    baseUri: https://language.googleapis.com/v1
+    description: Google Cloud Natural Language API — documents:analyzeSentiment business capability. Self-contained, no shared
+      references.
+    resources:
+    - name: documents:analyzeSentiment
+      path: /documents:analyzeSentiment
+      operations:
+      - name: analyzesentiment
+        method: POST
+        description: Google Cloud Natural Language Analyze sentiment
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+  exposes:
+  - type: rest
+    namespace: openapi-documents-analyzesentiment-rest
+    port: 8080
+    description: REST adapter for Google Cloud Natural Language API — documents:analyzeSentiment. One Spectral-compliant resource
+      per consumed operation, prefixed with /v1.
+    resources:
+    - path: /v1/documents-analyzesentiment
+      name: documents-analyzesentiment
+      description: REST surface for documents:analyzeSentiment.
+      operations:
+      - method: POST
+        name: analyzesentiment
+        description: Google Cloud Natural Language Analyze sentiment
+        call: openapi-documents-analyzesentiment.analyzesentiment
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: openapi-documents-analyzesentiment-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Google Cloud Natural Language API — documents:analyzeSentiment. One tool per consumed operation,
+      routed inline through this capability's consumes block.
+    tools:
+    - name: google-cloud-natural-language-analyze
+      description: Google Cloud Natural Language Analyze sentiment
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: openapi-documents-analyzesentiment.analyzesentiment
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
