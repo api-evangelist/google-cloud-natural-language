@@ -1,0 +1,125 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Google Cloud Natural Language API",
+    "version": "v1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "documents:analyzeSentiment",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google Cloud Natural Language Analyze sentiment",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://language.googleapis.com/v1/documents:analyzeSentiment",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Analyzes the sentiment of the provided text."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "documents:analyzeEntities",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google Cloud Natural Language Analyze entities",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://language.googleapis.com/v1/documents:analyzeEntities",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Finds named entities in the provided text."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "documents:classifyText",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google Cloud Natural Language Classify text",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://language.googleapis.com/v1/documents:classifyText",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Classifies the provided document into content categories."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "documents:analyzeSyntax",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google Cloud Natural Language Analyze syntax",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://language.googleapis.com/v1/documents:analyzeSyntax",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Analyzes the syntax of the provided text."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "documents:annotateText",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google Cloud Natural Language Annotate text",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://language.googleapis.com/v1/documents:annotateText",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Provides all available text analysis features in a single call."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

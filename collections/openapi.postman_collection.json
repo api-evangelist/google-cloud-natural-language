@@ -1,0 +1,531 @@
+{
+  "item": [
+    {
+      "id": "e6af9135-fb84-4e79-8b4a-198c132debec",
+      "name": "documents:analyzeEntities",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "7d27ddb1-3dcf-43a6-b07b-007f1f9d564a",
+          "name": "Google Cloud Natural Language Analyze entities",
+          "request": {
+            "name": "Google Cloud Natural Language Analyze entities",
+            "description": {
+              "content": "Finds named entities in the provided text.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "documents:analyzeEntities"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"document\": {\n    \"type\": \"<string>\",\n    \"content\": \"<string>\",\n    \"gcsContentUri\": \"<string>\",\n    \"language\": \"<string>\"\n  },\n  \"encodingType\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "cfdc2480-f3c5-4026-a448-d008355c8ee3",
+              "name": "Successful entity analysis response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "documents:analyzeEntities"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"document\": {\n    \"type\": \"HTML\",\n    \"content\": \"string\",\n    \"gcsContentUri\": \"string\",\n    \"language\": \"string\"\n  },\n  \"encodingType\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"entities\": [\n    {\n      \"name\": \"string\",\n      \"type\": \"PRICE\",\n      \"salience\": 5960.011332900809,\n      \"sentiment\": {\n        \"magnitude\": 2204.680107391287,\n        \"score\": 6640.707497922692\n      }\n    },\n    {\n      \"name\": \"string\",\n      \"type\": \"ORGANIZATION\",\n      \"salience\": 6931.174422652763,\n      \"sentiment\": {\n        \"magnitude\": 2638.181200594586,\n        \"score\": 4958.655238167524\n      }\n    }\n  ],\n  \"language\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "048a498d-8b0c-462b-bb5a-1eff4e76a987",
+      "name": "documents:analyzeSentiment",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "6bb4505c-5eab-4688-947c-7e4900dc3c96",
+          "name": "Google Cloud Natural Language Analyze sentiment",
+          "request": {
+            "name": "Google Cloud Natural Language Analyze sentiment",
+            "description": {
+              "content": "Analyzes the sentiment of the provided text.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "documents:analyzeSentiment"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"document\": {\n    \"type\": \"<string>\",\n    \"content\": \"<string>\",\n    \"gcsContentUri\": \"<string>\",\n    \"language\": \"<string>\"\n  },\n  \"encodingType\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "34540b56-02ae-46ed-aaf6-36c07f7ddfa3",
+              "name": "Successful sentiment analysis response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "documents:analyzeSentiment"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"document\": {\n    \"type\": \"HTML\",\n    \"content\": \"string\",\n    \"gcsContentUri\": \"string\",\n    \"language\": \"string\"\n  },\n  \"encodingType\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"documentSentiment\": {\n    \"magnitude\": 8490.663540078598,\n    \"score\": 5376.537112919085\n  },\n  \"language\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "cac82f74-a5c5-4b3b-9617-fc181fd40396",
+      "name": "documents:analyzeSyntax",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "c3c8875a-cf9a-406e-be27-cfee77738427",
+          "name": "Google Cloud Natural Language Analyze syntax",
+          "request": {
+            "name": "Google Cloud Natural Language Analyze syntax",
+            "description": {
+              "content": "Analyzes the syntax of the provided text.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "documents:analyzeSyntax"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"document\": {\n    \"type\": \"<string>\",\n    \"content\": \"<string>\",\n    \"gcsContentUri\": \"<string>\",\n    \"language\": \"<string>\"\n  },\n  \"encodingType\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "76433ea2-b4ef-49e2-a5b0-6d6657d67c2b",
+              "name": "Successful syntax analysis response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "documents:analyzeSyntax"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"document\": {\n    \"type\": \"HTML\",\n    \"content\": \"string\",\n    \"gcsContentUri\": \"string\",\n    \"language\": \"string\"\n  },\n  \"encodingType\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"language\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "363a09b4-b5ae-4e88-a7a3-fe99f99218e8",
+      "name": "documents:annotateText",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "9466e943-74d2-4983-8e7e-f80cd0919b81",
+          "name": "Google Cloud Natural Language Annotate text",
+          "request": {
+            "name": "Google Cloud Natural Language Annotate text",
+            "description": {
+              "content": "Provides all available text analysis features in a single call.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "documents:annotateText"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"document\": {\n    \"type\": \"<string>\",\n    \"content\": \"<string>\",\n    \"gcsContentUri\": \"<string>\",\n    \"language\": \"<string>\"\n  },\n  \"features\": {\n    \"extractSyntax\": \"<boolean>\",\n    \"extractEntities\": \"<boolean>\",\n    \"extractDocumentSentiment\": \"<boolean>\",\n    \"extractEntitySentiment\": \"<boolean>\",\n    \"classifyText\": \"<boolean>\"\n  },\n  \"encodingType\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "45cba5de-c7d9-4129-8389-9fb368a685ec",
+              "name": "Successful annotation response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "documents:annotateText"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"document\": {\n    \"type\": \"HTML\",\n    \"content\": \"string\",\n    \"gcsContentUri\": \"string\",\n    \"language\": \"string\"\n  },\n  \"features\": {\n    \"extractSyntax\": \"<boolean>\",\n    \"extractEntities\": \"<boolean>\",\n    \"extractDocumentSentiment\": \"<boolean>\",\n    \"extractEntitySentiment\": \"<boolean>\",\n    \"classifyText\": \"<boolean>\"\n  },\n  \"encodingType\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"entities\": [\n    {\n      \"name\": \"string\",\n      \"type\": \"EVENT\",\n      \"salience\": 5211.007340905752,\n      \"sentiment\": {\n        \"magnitude\": 5540.947425633891,\n        \"score\": 4906.743687037118\n      }\n    },\n    {\n      \"name\": \"string\",\n      \"type\": \"OTHER\",\n      \"salience\": 9519.678574057387,\n      \"sentiment\": {\n        \"magnitude\": 3968.931503899108,\n        \"score\": 172.20324622027826\n      }\n    }\n  ],\n  \"documentSentiment\": {\n    \"magnitude\": 899.2397874857716,\n    \"score\": 4413.589692359774\n  },\n  \"language\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "95a44908-cec1-4124-9053-7b0a847c27e5",
+      "name": "documents:classifyText",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "127bc22f-c7a0-456d-be40-517cff94a820",
+          "name": "Google Cloud Natural Language Classify text",
+          "request": {
+            "name": "Google Cloud Natural Language Classify text",
+            "description": {
+              "content": "Classifies the provided document into content categories.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "documents:classifyText"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"document\": {\n    \"type\": \"<string>\",\n    \"content\": \"<string>\",\n    \"gcsContentUri\": \"<string>\",\n    \"language\": \"<string>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "cde9524b-10e4-4058-88af-6bc246285765",
+              "name": "Successful text classification response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "documents:classifyText"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"document\": {\n    \"type\": \"PLAIN_TEXT\",\n    \"content\": \"string\",\n    \"gcsContentUri\": \"string\",\n    \"language\": \"string\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"categories\": [\n    {\n      \"name\": \"string\",\n      \"confidence\": 6522.60510060519\n    },\n    {\n      \"name\": \"string\",\n      \"confidence\": 9620.945805288711\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://language.googleapis.com/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "b8358f42-f88c-486d-af5b-26f7827fd92e",
+    "name": "Google Cloud Natural Language API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Provides natural language understanding technologies to extract insights from unstructured text including sentiment, entities, and syntax.\n\nContact Support:\n Name: Google Cloud",
+      "type": "text/plain"
+    }
+  }
+}
