@@ -4,7 +4,7 @@ description: >-
   Google Cloud Natural Language API provides natural language understanding technologies including sentiment analysis,
   entity recognition, entity sentiment analysis, content classification, and syntax analysis. It helps developers
   extract insights from unstructured text.
-image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/google-cloud-natural-language/refs/heads/main/apis.yml
 created: '2026-03-13'
 modified: '2026-05-19'
