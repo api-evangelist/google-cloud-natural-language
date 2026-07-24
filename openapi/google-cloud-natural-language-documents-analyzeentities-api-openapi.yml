@@ -1,0 +1,100 @@
+openapi: 3.1.0
+info:
+  title: Google Cloud Natural Language documents:analyzeEntities API
+  description: Provides natural language understanding technologies to extract insights from unstructured text including sentiment, entities, and syntax.
+  version: v1
+  contact:
+    name: Google Cloud
+    url: https://cloud.google.com/natural-language
+servers:
+- url: https://language.googleapis.com/v1
+tags:
+- name: documents:analyzeEntities
+paths:
+  /documents:analyzeEntities:
+    post:
+      operationId: analyzeEntities
+      summary: Google Cloud Natural Language Analyze entities
+      description: Finds named entities in the provided text.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AnalyzeEntitiesRequest'
+      responses:
+        '200':
+          description: Successful entity analysis response.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AnalyzeEntitiesResponse'
+      tags:
+      - documents:analyzeEntities
+components:
+  schemas:
+    Document:
+      type: object
+      properties:
+        type:
+          type: string
+          enum:
+          - TYPE_UNSPECIFIED
+          - PLAIN_TEXT
+          - HTML
+        content:
+          type: string
+        gcsContentUri:
+          type: string
+        language:
+          type: string
+    AnalyzeEntitiesResponse:
+      type: object
+      properties:
+        entities:
+          type: array
+          items:
+            $ref: '#/components/schemas/Entity'
+        language:
+          type: string
+    AnalyzeEntitiesRequest:
+      type: object
+      required:
+      - document
+      properties:
+        document:
+          $ref: '#/components/schemas/Document'
+        encodingType:
+          type: string
+    Sentiment:
+      type: object
+      properties:
+        magnitude:
+          type: number
+        score:
+          type: number
+    Entity:
+      type: object
+      properties:
+        name:
+          type: string
+        type:
+          type: string
+          enum:
+          - UNKNOWN
+          - PERSON
+          - LOCATION
+          - ORGANIZATION
+          - EVENT
+          - WORK_OF_ART
+          - CONSUMER_GOOD
+          - OTHER
+          - PHONE_NUMBER
+          - ADDRESS
+          - DATE
+          - NUMBER
+          - PRICE
+        salience:
+          type: number
+        sentiment:
+          $ref: '#/components/schemas/Sentiment'

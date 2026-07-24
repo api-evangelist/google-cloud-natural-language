@@ -1,0 +1,77 @@
+openapi: 3.1.0
+info:
+  title: Google Cloud Natural Language documents:analyzeEntities documents:analyzeSentiment API
+  description: Provides natural language understanding technologies to extract insights from unstructured text including sentiment, entities, and syntax.
+  version: v1
+  contact:
+    name: Google Cloud
+    url: https://cloud.google.com/natural-language
+servers:
+- url: https://language.googleapis.com/v1
+tags:
+- name: documents:analyzeSentiment
+paths:
+  /documents:analyzeSentiment:
+    post:
+      operationId: analyzeSentiment
+      summary: Google Cloud Natural Language Analyze sentiment
+      description: Analyzes the sentiment of the provided text.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AnalyzeSentimentRequest'
+      responses:
+        '200':
+          description: Successful sentiment analysis response.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AnalyzeSentimentResponse'
+      tags:
+      - documents:analyzeSentiment
+components:
+  schemas:
+    Document:
+      type: object
+      properties:
+        type:
+          type: string
+          enum:
+          - TYPE_UNSPECIFIED
+          - PLAIN_TEXT
+          - HTML
+        content:
+          type: string
+        gcsContentUri:
+          type: string
+        language:
+          type: string
+    AnalyzeSentimentResponse:
+      type: object
+      properties:
+        documentSentiment:
+          $ref: '#/components/schemas/Sentiment'
+        language:
+          type: string
+        sentences:
+          type: array
+          items:
+            type: object
+    AnalyzeSentimentRequest:
+      type: object
+      required:
+      - document
+      properties:
+        document:
+          $ref: '#/components/schemas/Document'
+        encodingType:
+          type: string
+    Sentiment:
+      type: object
+      properties:
+        magnitude:
+          type: number
+        score:
+          type: number
