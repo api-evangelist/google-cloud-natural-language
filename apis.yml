@@ -4,7 +4,19 @@ description: >-
   Google Cloud Natural Language API provides natural language understanding technologies including sentiment analysis,
   entity recognition, entity sentiment analysis, content classification, and syntax analysis. It helps developers
   extract insights from unstructured text.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/google-cloud-natural-language.png
 url: https://raw.githubusercontent.com/api-evangelist/google-cloud-natural-language/refs/heads/main/apis.yml
 created: '2026-03-13'
 modified: '2026-05-19'
@@ -18,30 +30,116 @@ tags:
   - Sentiment Analysis
   - Text Analysis
 apis:
-  - name: Google Cloud Natural Language API
-    description: >-
-      Analyzes text to extract entities, sentiment, syntax, and content classification using Google's machine learning
-      models.
-    humanURL: https://cloud.google.com/natural-language
-    baseURL: https://language.googleapis.com
-    tags:
-      - Entity Recognition
-      - Natural Language Processing
-      - Sentiment Analysis
-    properties:
-      - type: Documentation
-        url: https://cloud.google.com/natural-language/docs/reference/rest
-      - type: OpenAPI
-        url: openapi/openapi.yml
-      - type: Authentication
-        url: https://cloud.google.com/natural-language/docs/authentication
-      - type: GettingStarted
-        url: https://cloud.google.com/natural-language/docs/quickstarts
-      - type: JSONSchema
-        url: json-schema/document-analysis.json
-      - type: JSONLD
-        url: json-ld/context.jsonld
+- aid: >-
+    google-cloud-natural-language:google-cloud-natural-language-documents-analyzeentities-api
+  name: Google Cloud Natural Language documents:analyzeEntities API
+  description: >-
+    The documents:analyzeEntities API from Google Cloud Natural Language — 1 operation(s) for documents:analyzeentities.
+  humanURL: https://cloud.google.com/natural-language
+  baseURL: https://language.googleapis.com
+  tags:
+  - documents:analyzeEntities
+  properties:
+  - type: OpenAPI
+    url: openapi/google-cloud-natural-language-documents-analyzeentities-api-openapi.yml
+  - type: Documentation
+    url: https://cloud.google.com/natural-language/docs/reference/rest
+  - type: Authentication
+    url: https://cloud.google.com/natural-language/docs/authentication
+  - type: GettingStarted
+    url: https://cloud.google.com/natural-language/docs/quickstarts
+  - type: JSONSchema
+    url: json-schema/document-analysis.json
+  - type: JSONLD
+    url: json-ld/context.jsonld
+- aid: >-
+    google-cloud-natural-language:google-cloud-natural-language-documents-analyzesentiment-api
+  name: Google Cloud Natural Language documents:analyzeSentiment API
+  description: >-
+    The documents:analyzeSentiment API from Google Cloud Natural Language — 1 operation(s) for documents:analyzesentiment.
+  humanURL: https://cloud.google.com/natural-language
+  baseURL: https://language.googleapis.com
+  tags:
+  - documents:analyzeSentiment
+  properties:
+  - type: OpenAPI
+    url: openapi/google-cloud-natural-language-documents-analyzesentiment-api-openapi.yml
+  - type: Documentation
+    url: https://cloud.google.com/natural-language/docs/reference/rest
+  - type: Authentication
+    url: https://cloud.google.com/natural-language/docs/authentication
+  - type: GettingStarted
+    url: https://cloud.google.com/natural-language/docs/quickstarts
+  - type: JSONSchema
+    url: json-schema/document-analysis.json
+  - type: JSONLD
+    url: json-ld/context.jsonld
+- aid: google-cloud-natural-language:google-cloud-natural-language-documents-analyzesyntax-api
+  name: Google Cloud Natural Language documents:analyzeSyntax API
+  description: >-
+    The documents:analyzeSyntax API from Google Cloud Natural Language — 1 operation(s) for documents:analyzesyntax.
+  humanURL: https://cloud.google.com/natural-language
+  baseURL: https://language.googleapis.com
+  tags:
+  - documents:analyzeSyntax
+  properties:
+  - type: OpenAPI
+    url: openapi/google-cloud-natural-language-documents-analyzesyntax-api-openapi.yml
+  - type: Documentation
+    url: https://cloud.google.com/natural-language/docs/reference/rest
+  - type: Authentication
+    url: https://cloud.google.com/natural-language/docs/authentication
+  - type: GettingStarted
+    url: https://cloud.google.com/natural-language/docs/quickstarts
+  - type: JSONSchema
+    url: json-schema/document-analysis.json
+  - type: JSONLD
+    url: json-ld/context.jsonld
+- aid: google-cloud-natural-language:google-cloud-natural-language-documents-annotatetext-api
+  name: Google Cloud Natural Language documents:annotateText API
+  description: >-
+    The documents:annotateText API from Google Cloud Natural Language — 1 operation(s) for documents:annotatetext.
+  humanURL: https://cloud.google.com/natural-language
+  baseURL: https://language.googleapis.com
+  tags:
+  - documents:annotateText
+  properties:
+  - type: OpenAPI
+    url: openapi/google-cloud-natural-language-documents-annotatetext-api-openapi.yml
+  - type: Documentation
+    url: https://cloud.google.com/natural-language/docs/reference/rest
+  - type: Authentication
+    url: https://cloud.google.com/natural-language/docs/authentication
+  - type: GettingStarted
+    url: https://cloud.google.com/natural-language/docs/quickstarts
+  - type: JSONSchema
+    url: json-schema/document-analysis.json
+  - type: JSONLD
+    url: json-ld/context.jsonld
+- aid: google-cloud-natural-language:google-cloud-natural-language-documents-classifytext-api
+  name: Google Cloud Natural Language documents:classifyText API
+  description: >-
+    The documents:classifyText API from Google Cloud Natural Language — 1 operation(s) for documents:classifytext.
+  humanURL: https://cloud.google.com/natural-language
+  baseURL: https://language.googleapis.com
+  tags:
+  - documents:classifyText
+  properties:
+  - type: OpenAPI
+    url: openapi/google-cloud-natural-language-documents-classifytext-api-openapi.yml
+  - type: Documentation
+    url: https://cloud.google.com/natural-language/docs/reference/rest
+  - type: Authentication
+    url: https://cloud.google.com/natural-language/docs/authentication
+  - type: GettingStarted
+    url: https://cloud.google.com/natural-language/docs/quickstarts
+  - type: JSONSchema
+    url: json-schema/document-analysis.json
+  - type: JSONLD
+    url: json-ld/context.jsonld
 common:
+  - type: PostmanWorkspace
+    url: https://www.postman.com/kinlaneapi/google-cloud-natural-language/overview
   - type: AgenticAccess
     url: agentic-access/google-cloud-natural-language-agentic-access.yml
   - type: VulnerabilityDisclosure
