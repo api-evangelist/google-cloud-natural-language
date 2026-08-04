@@ -1,0 +1,22 @@
+{
+  "provider": "google-cloud-natural-language",
+  "sources": [
+    "google-cloud-natural-language-documents-analyzeentities-api-openapi.yml",
+    "google-cloud-natural-language-documents-analyzesentiment-api-openapi.yml",
+    "google-cloud-natural-language-documents-analyzesyntax-api-openapi.yml",
+    "google-cloud-natural-language-documents-annotatetext-api-openapi.yml",
+    "google-cloud-natural-language-documents-classifytext-api-openapi.yml"
+  ],
+  "outputs": [
+    "google-cloud-natural-language-documents-analyzeentities-api-openapi.yml",
+    "google-cloud-natural-language-documents-analyzesentiment-api-openapi.yml",
+    "google-cloud-natural-language-documents-analyzesyntax-api-openapi.yml",
+    "google-cloud-natural-language-documents-annotatetext-api-openapi.yml",
+    "google-cloud-natural-language-documents-classifytext-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

@@ -1,0 +1,125 @@
+{
+  "info": {
+    "_postman_id": "8b6c8278-3573-4f41-ae36-e614c68a7ce9",
+    "name": "Google Cloud Natural Language documents:analyzeEntities documents:classifyText API",
+    "description": "Provides natural language understanding technologies to extract insights from unstructured text including sentiment, entities, and syntax.\n\nContact Support:\n Name: Google Cloud",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:48:09.000Z",
+    "updatedAt": "2026-07-28T01:48:09.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-8b6c8278-3573-4f41-ae36-e614c68a7ce9"
+  },
+  "item": [
+    {
+      "name": "documents:classifyText",
+      "item": [
+        {
+          "name": "Google Cloud Natural Language Classify text",
+          "id": "14dcae6f-bf6a-4422-ac8a-be02055e6fce",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"document\": {\n    \"type\": \"PLAIN_TEXT\",\n    \"content\": \"<string>\",\n    \"gcsContentUri\": \"<string>\",\n    \"language\": \"<string>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/documents:classifyText",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "documents:classifyText"
+              ]
+            },
+            "description": "Classifies the provided document into content categories."
+          },
+          "response": [
+            {
+              "id": "c63fc40f-87cb-475f-937f-0f01ca327f85",
+              "name": "Successful text classification response.",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"document\": {\n    \"type\": \"PLAIN_TEXT\",\n    \"content\": \"<string>\",\n    \"gcsContentUri\": \"<string>\",\n    \"language\": \"<string>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/documents:classifyText",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "documents:classifyText"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"categories\": [\n    {\n      \"name\": \"<string>\",\n      \"confidence\": \"<number>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"confidence\": \"<number>\"\n    }\n  ]\n}",
+              "createdAt": "2026-07-28T01:48:10.000Z",
+              "updatedAt": "2026-07-28T01:48:10.000Z",
+              "uid": "35240-c63fc40f-87cb-475f-937f-0f01ca327f85"
+            }
+          ],
+          "createdAt": "2026-07-28T01:48:10.000Z",
+          "updatedAt": "2026-07-28T01:48:10.000Z",
+          "uid": "35240-14dcae6f-bf6a-4422-ac8a-be02055e6fce"
+        }
+      ],
+      "id": "dd5a09fe-277b-4caf-b3fc-db3522aa6d1b",
+      "createdAt": "2026-07-28T01:48:10.000Z",
+      "updatedAt": "2026-07-28T01:48:10.000Z",
+      "uid": "35240-dd5a09fe-277b-4caf-b3fc-db3522aa6d1b"
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://language.googleapis.com/v1"
+    }
+  ]
+}

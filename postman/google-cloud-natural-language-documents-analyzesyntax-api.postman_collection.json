@@ -1,0 +1,125 @@
+{
+  "info": {
+    "_postman_id": "9e8da9b7-416b-4774-bea1-1a9aca3a3564",
+    "name": "Google Cloud Natural Language documents:analyzeEntities documents:analyzeSyntax API",
+    "description": "Provides natural language understanding technologies to extract insights from unstructured text including sentiment, entities, and syntax.\n\nContact Support:\n Name: Google Cloud",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:48:05.000Z",
+    "updatedAt": "2026-07-28T01:48:05.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-9e8da9b7-416b-4774-bea1-1a9aca3a3564"
+  },
+  "item": [
+    {
+      "name": "documents:analyzeSyntax",
+      "item": [
+        {
+          "name": "Google Cloud Natural Language Analyze syntax",
+          "id": "f1e53239-717c-462c-bdf9-cb020405baaa",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"document\": {\n    \"type\": \"PLAIN_TEXT\",\n    \"content\": \"<string>\",\n    \"gcsContentUri\": \"<string>\",\n    \"language\": \"<string>\"\n  },\n  \"encodingType\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/documents:analyzeSyntax",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "documents:analyzeSyntax"
+              ]
+            },
+            "description": "Analyzes the syntax of the provided text."
+          },
+          "response": [
+            {
+              "id": "4d1854ae-7d30-4096-92ea-c0f89be17ed4",
+              "name": "Successful syntax analysis response.",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"document\": {\n    \"type\": \"PLAIN_TEXT\",\n    \"content\": \"<string>\",\n    \"gcsContentUri\": \"<string>\",\n    \"language\": \"<string>\"\n  },\n  \"encodingType\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/documents:analyzeSyntax",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "documents:analyzeSyntax"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"language\": \"<string>\"\n}",
+              "createdAt": "2026-07-28T01:48:05.000Z",
+              "updatedAt": "2026-07-28T01:48:05.000Z",
+              "uid": "35240-4d1854ae-7d30-4096-92ea-c0f89be17ed4"
+            }
+          ],
+          "createdAt": "2026-07-28T01:48:05.000Z",
+          "updatedAt": "2026-07-28T01:48:05.000Z",
+          "uid": "35240-f1e53239-717c-462c-bdf9-cb020405baaa"
+        }
+      ],
+      "id": "666e8e35-4c95-48bc-af3e-da24830fddf8",
+      "createdAt": "2026-07-28T01:48:05.000Z",
+      "updatedAt": "2026-07-28T01:48:05.000Z",
+      "uid": "35240-666e8e35-4c95-48bc-af3e-da24830fddf8"
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://language.googleapis.com/v1"
+    }
+  ]
+}

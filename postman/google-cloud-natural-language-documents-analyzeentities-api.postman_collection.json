@@ -1,0 +1,125 @@
+{
+  "info": {
+    "_postman_id": "38a6ec44-1c82-41f6-aac6-4da9dafd61b2",
+    "name": "Google Cloud Natural Language documents:analyzeEntities API",
+    "description": "Provides natural language understanding technologies to extract insights from unstructured text including sentiment, entities, and syntax.\n\nContact Support:\n Name: Google Cloud",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:48:01.000Z",
+    "updatedAt": "2026-07-28T01:48:01.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-38a6ec44-1c82-41f6-aac6-4da9dafd61b2"
+  },
+  "item": [
+    {
+      "name": "documents:analyzeEntities",
+      "item": [
+        {
+          "name": "Google Cloud Natural Language Analyze entities",
+          "id": "a20e4b5f-2ca1-418f-a35b-61ec924ba497",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"document\": {\n    \"type\": \"TYPE_UNSPECIFIED\",\n    \"content\": \"<string>\",\n    \"gcsContentUri\": \"<string>\",\n    \"language\": \"<string>\"\n  },\n  \"encodingType\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/documents:analyzeEntities",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "documents:analyzeEntities"
+              ]
+            },
+            "description": "Finds named entities in the provided text."
+          },
+          "response": [
+            {
+              "id": "4b38d1b8-8e8a-4948-bcdc-00e9e0656f82",
+              "name": "Successful entity analysis response.",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"document\": {\n    \"type\": \"TYPE_UNSPECIFIED\",\n    \"content\": \"<string>\",\n    \"gcsContentUri\": \"<string>\",\n    \"language\": \"<string>\"\n  },\n  \"encodingType\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/documents:analyzeEntities",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "documents:analyzeEntities"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"entities\": [\n    {\n      \"name\": \"<string>\",\n      \"type\": \"UNKNOWN\",\n      \"salience\": \"<number>\",\n      \"sentiment\": {\n        \"magnitude\": \"<number>\",\n        \"score\": \"<number>\"\n      }\n    },\n    {\n      \"name\": \"<string>\",\n      \"type\": \"WORK_OF_ART\",\n      \"salience\": \"<number>\",\n      \"sentiment\": {\n        \"magnitude\": \"<number>\",\n        \"score\": \"<number>\"\n      }\n    }\n  ],\n  \"language\": \"<string>\"\n}",
+              "createdAt": "2026-07-28T01:48:01.000Z",
+              "updatedAt": "2026-07-28T01:48:01.000Z",
+              "uid": "35240-4b38d1b8-8e8a-4948-bcdc-00e9e0656f82"
+            }
+          ],
+          "createdAt": "2026-07-28T01:48:01.000Z",
+          "updatedAt": "2026-07-28T01:48:01.000Z",
+          "uid": "35240-a20e4b5f-2ca1-418f-a35b-61ec924ba497"
+        }
+      ],
+      "id": "235f4ad2-a5d5-4679-87d9-d669b2c2620c",
+      "createdAt": "2026-07-28T01:48:01.000Z",
+      "updatedAt": "2026-07-28T01:48:01.000Z",
+      "uid": "35240-235f4ad2-a5d5-4679-87d9-d669b2c2620c"
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://language.googleapis.com/v1"
+    }
+  ]
+}

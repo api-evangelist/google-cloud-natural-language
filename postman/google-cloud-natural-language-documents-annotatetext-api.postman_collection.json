@@ -1,0 +1,125 @@
+{
+  "info": {
+    "_postman_id": "fd35363d-adea-4033-a0ed-3847b1cb6961",
+    "name": "Google Cloud Natural Language documents:analyzeEntities documents:annotateText API",
+    "description": "Provides natural language understanding technologies to extract insights from unstructured text including sentiment, entities, and syntax.\n\nContact Support:\n Name: Google Cloud",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:48:05.000Z",
+    "updatedAt": "2026-07-28T01:48:06.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-fd35363d-adea-4033-a0ed-3847b1cb6961"
+  },
+  "item": [
+    {
+      "name": "documents:annotateText",
+      "item": [
+        {
+          "name": "Google Cloud Natural Language Annotate text",
+          "id": "fa02e2f5-5bf2-4e36-8bcd-ffbf8cf145be",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"document\": {\n    \"type\": \"PLAIN_TEXT\",\n    \"content\": \"<string>\",\n    \"gcsContentUri\": \"<string>\",\n    \"language\": \"<string>\"\n  },\n  \"features\": {\n    \"extractSyntax\": \"<boolean>\",\n    \"extractEntities\": \"<boolean>\",\n    \"extractDocumentSentiment\": \"<boolean>\",\n    \"extractEntitySentiment\": \"<boolean>\",\n    \"classifyText\": \"<boolean>\"\n  },\n  \"encodingType\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/documents:annotateText",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "documents:annotateText"
+              ]
+            },
+            "description": "Provides all available text analysis features in a single call."
+          },
+          "response": [
+            {
+              "id": "96156fc6-f734-4520-968f-eda91241ae50",
+              "name": "Successful annotation response.",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"document\": {\n    \"type\": \"PLAIN_TEXT\",\n    \"content\": \"<string>\",\n    \"gcsContentUri\": \"<string>\",\n    \"language\": \"<string>\"\n  },\n  \"features\": {\n    \"extractSyntax\": \"<boolean>\",\n    \"extractEntities\": \"<boolean>\",\n    \"extractDocumentSentiment\": \"<boolean>\",\n    \"extractEntitySentiment\": \"<boolean>\",\n    \"classifyText\": \"<boolean>\"\n  },\n  \"encodingType\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/documents:annotateText",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "documents:annotateText"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"entities\": [\n    {\n      \"name\": \"<string>\",\n      \"type\": \"WORK_OF_ART\",\n      \"salience\": \"<number>\",\n      \"sentiment\": {\n        \"magnitude\": \"<number>\",\n        \"score\": \"<number>\"\n      }\n    },\n    {\n      \"name\": \"<string>\",\n      \"type\": \"PHONE_NUMBER\",\n      \"salience\": \"<number>\",\n      \"sentiment\": {\n        \"magnitude\": \"<number>\",\n        \"score\": \"<number>\"\n      }\n    }\n  ],\n  \"documentSentiment\": {\n    \"magnitude\": \"<number>\",\n    \"score\": \"<number>\"\n  },\n  \"language\": \"<string>\"\n}",
+              "createdAt": "2026-07-28T01:48:06.000Z",
+              "updatedAt": "2026-07-28T01:48:06.000Z",
+              "uid": "35240-96156fc6-f734-4520-968f-eda91241ae50"
+            }
+          ],
+          "createdAt": "2026-07-28T01:48:06.000Z",
+          "updatedAt": "2026-07-28T01:48:06.000Z",
+          "uid": "35240-fa02e2f5-5bf2-4e36-8bcd-ffbf8cf145be"
+        }
+      ],
+      "id": "cb9e940c-5b43-4d18-9436-5b9326635066",
+      "createdAt": "2026-07-28T01:48:06.000Z",
+      "updatedAt": "2026-07-28T01:48:06.000Z",
+      "uid": "35240-cb9e940c-5b43-4d18-9436-5b9326635066"
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://language.googleapis.com/v1"
+    }
+  ]
+}
