@@ -1,0 +1,123 @@
+{
+  "item": [
+    {
+      "id": "a3e51d2b-822c-43cb-b419-0bb7cbc81fbd",
+      "name": "documents:classifyText",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "6d85acd5-8534-47a1-80a9-2dcbe3f304d3",
+          "name": "Google Cloud Natural Language Classify text",
+          "request": {
+            "name": "Google Cloud Natural Language Classify text",
+            "description": {
+              "content": "Classifies the provided document into content categories.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "documents:classifyText"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"document\": {\n    \"type\": \"<string>\",\n    \"content\": \"<string>\",\n    \"gcsContentUri\": \"<string>\",\n    \"language\": \"<string>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "31e7f316-3f8c-4aec-a5ff-df2d1e41cc87",
+              "name": "Successful text classification response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "documents:classifyText"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"document\": {\n    \"type\": \"TYPE_UNSPECIFIED\",\n    \"content\": \"string\",\n    \"gcsContentUri\": \"string\",\n    \"language\": \"string\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"categories\": [\n    {\n      \"name\": \"string\",\n      \"confidence\": 3246.528189936123\n    },\n    {\n      \"name\": \"string\",\n      \"confidence\": 5885.488913814733\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://language.googleapis.com/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "feba2b03-ab58-42a3-8cd7-5afa8d09f8d2",
+    "name": "Google Cloud Natural Language documents:analyzeEntities documents:classifyText API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Provides natural language understanding technologies to extract insights from unstructured text including sentiment, entities, and syntax.\n\nContact Support:\n Name: Google Cloud",
+      "type": "text/plain"
+    }
+  }
+}

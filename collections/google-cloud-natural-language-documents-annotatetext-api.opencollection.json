@@ -1,0 +1,33 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Google Cloud Natural Language documents:analyzeEntities documents:annotateText API",
+    "version": "v1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "documents:annotateText",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google Cloud Natural Language Annotate text",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://language.googleapis.com/v1/documents:annotateText",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Provides all available text analysis features in a single call."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

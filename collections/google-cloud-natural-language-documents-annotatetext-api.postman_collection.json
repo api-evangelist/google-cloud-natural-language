@@ -1,0 +1,123 @@
+{
+  "item": [
+    {
+      "id": "462f4c83-dfe6-4f40-91f5-005496a389d5",
+      "name": "documents:annotateText",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "d985f7ae-e905-4a8b-976f-9ef9379b6dc6",
+          "name": "Google Cloud Natural Language Annotate text",
+          "request": {
+            "name": "Google Cloud Natural Language Annotate text",
+            "description": {
+              "content": "Provides all available text analysis features in a single call.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "documents:annotateText"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"document\": {\n    \"type\": \"<string>\",\n    \"content\": \"<string>\",\n    \"gcsContentUri\": \"<string>\",\n    \"language\": \"<string>\"\n  },\n  \"features\": {\n    \"extractSyntax\": \"<boolean>\",\n    \"extractEntities\": \"<boolean>\",\n    \"extractDocumentSentiment\": \"<boolean>\",\n    \"extractEntitySentiment\": \"<boolean>\",\n    \"classifyText\": \"<boolean>\"\n  },\n  \"encodingType\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "991fe825-29d1-4d39-bef4-74cf67894f9a",
+              "name": "Successful annotation response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "documents:annotateText"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"document\": {\n    \"type\": \"HTML\",\n    \"content\": \"string\",\n    \"gcsContentUri\": \"string\",\n    \"language\": \"string\"\n  },\n  \"features\": {\n    \"extractSyntax\": \"<boolean>\",\n    \"extractEntities\": \"<boolean>\",\n    \"extractDocumentSentiment\": \"<boolean>\",\n    \"extractEntitySentiment\": \"<boolean>\",\n    \"classifyText\": \"<boolean>\"\n  },\n  \"encodingType\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"entities\": [\n    {\n      \"name\": \"string\",\n      \"type\": \"NUMBER\",\n      \"salience\": 9041.843857636932,\n      \"sentiment\": {\n        \"magnitude\": 7318.041009032622,\n        \"score\": 2544.632022189951\n      }\n    },\n    {\n      \"name\": \"string\",\n      \"type\": \"PRICE\",\n      \"salience\": 2820.975351880687,\n      \"sentiment\": {\n        \"magnitude\": 4576.1360383879355,\n        \"score\": 6581.471025857553\n      }\n    }\n  ],\n  \"documentSentiment\": {\n    \"magnitude\": 9134.800052301509,\n    \"score\": 7710.8648154254715\n  },\n  \"language\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://language.googleapis.com/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "d4f3edbd-2138-4932-b14e-b67168b66ee9",
+    "name": "Google Cloud Natural Language documents:analyzeEntities documents:annotateText API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Provides natural language understanding technologies to extract insights from unstructured text including sentiment, entities, and syntax.\n\nContact Support:\n Name: Google Cloud",
+      "type": "text/plain"
+    }
+  }
+}

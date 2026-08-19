@@ -1,0 +1,123 @@
+{
+  "item": [
+    {
+      "id": "04c50645-77b9-41bf-b4e2-bb108aec4127",
+      "name": "documents:analyzeEntities",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "26b41bdd-113b-4af3-bdaf-f558361f64ec",
+          "name": "Google Cloud Natural Language Analyze entities",
+          "request": {
+            "name": "Google Cloud Natural Language Analyze entities",
+            "description": {
+              "content": "Finds named entities in the provided text.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "documents:analyzeEntities"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"document\": {\n    \"type\": \"<string>\",\n    \"content\": \"<string>\",\n    \"gcsContentUri\": \"<string>\",\n    \"language\": \"<string>\"\n  },\n  \"encodingType\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "906a5a7d-998d-4b34-bc0f-c7f3578b1c35",
+              "name": "Successful entity analysis response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "documents:analyzeEntities"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"document\": {\n    \"type\": \"TYPE_UNSPECIFIED\",\n    \"content\": \"string\",\n    \"gcsContentUri\": \"string\",\n    \"language\": \"string\"\n  },\n  \"encodingType\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"entities\": [\n    {\n      \"name\": \"string\",\n      \"type\": \"UNKNOWN\",\n      \"salience\": 9848.591875181364,\n      \"sentiment\": {\n        \"magnitude\": 5657.745738604877,\n        \"score\": 8656.637521587387\n      }\n    },\n    {\n      \"name\": \"string\",\n      \"type\": \"WORK_OF_ART\",\n      \"salience\": 6896.036387717131,\n      \"sentiment\": {\n        \"magnitude\": 5304.592055224922,\n        \"score\": 4286.9051492290555\n      }\n    }\n  ],\n  \"language\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://language.googleapis.com/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "ac558994-d2b7-471e-97db-5f5c08a8f1fc",
+    "name": "Google Cloud Natural Language documents:analyzeEntities API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Provides natural language understanding technologies to extract insights from unstructured text including sentiment, entities, and syntax.\n\nContact Support:\n Name: Google Cloud",
+      "type": "text/plain"
+    }
+  }
+}

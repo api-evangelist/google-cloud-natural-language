@@ -1,0 +1,33 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Google Cloud Natural Language documents:analyzeEntities documents:analyzeSyntax API",
+    "version": "v1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "documents:analyzeSyntax",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google Cloud Natural Language Analyze syntax",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://language.googleapis.com/v1/documents:analyzeSyntax",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Analyzes the syntax of the provided text."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

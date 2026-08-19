@@ -1,0 +1,123 @@
+{
+  "item": [
+    {
+      "id": "beda27f9-bf4a-457f-a95a-93634b4e3c23",
+      "name": "documents:analyzeSentiment",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "659bd51e-4f5b-4cc4-a198-e85341845059",
+          "name": "Google Cloud Natural Language Analyze sentiment",
+          "request": {
+            "name": "Google Cloud Natural Language Analyze sentiment",
+            "description": {
+              "content": "Analyzes the sentiment of the provided text.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "documents:analyzeSentiment"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"document\": {\n    \"type\": \"<string>\",\n    \"content\": \"<string>\",\n    \"gcsContentUri\": \"<string>\",\n    \"language\": \"<string>\"\n  },\n  \"encodingType\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "0f8258c8-9414-4804-b32b-79718502624b",
+              "name": "Successful sentiment analysis response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "documents:analyzeSentiment"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"document\": {\n    \"type\": \"HTML\",\n    \"content\": \"string\",\n    \"gcsContentUri\": \"string\",\n    \"language\": \"string\"\n  },\n  \"encodingType\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"documentSentiment\": {\n    \"magnitude\": 2465.4851390338285,\n    \"score\": 1972.1400282838742\n  },\n  \"language\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://language.googleapis.com/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "74f8d87a-d2e1-4dd0-8d8e-c046c64d0830",
+    "name": "Google Cloud Natural Language documents:analyzeEntities documents:analyzeSentiment API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Provides natural language understanding technologies to extract insights from unstructured text including sentiment, entities, and syntax.\n\nContact Support:\n Name: Google Cloud",
+      "type": "text/plain"
+    }
+  }
+}

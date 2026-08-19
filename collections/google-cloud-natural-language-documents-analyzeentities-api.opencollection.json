@@ -1,0 +1,33 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Google Cloud Natural Language documents:analyzeEntities API",
+    "version": "v1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "documents:analyzeEntities",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google Cloud Natural Language Analyze entities",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://language.googleapis.com/v1/documents:analyzeEntities",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Finds named entities in the provided text."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
