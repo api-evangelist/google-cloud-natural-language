@@ -4,6 +4,18 @@ description: >-
   Google Cloud Natural Language API provides natural language understanding technologies including sentiment analysis,
   entity recognition, entity sentiment analysis, content classification, and syntax analysis. It helps developers
   extract insights from unstructured text.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: unknown
