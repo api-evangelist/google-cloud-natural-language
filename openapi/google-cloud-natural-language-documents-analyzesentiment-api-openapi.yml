@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Google Cloud Natural Language documents:analyzeEntities Documents:analyze Sentiment API
+  title: Google Cloud Natural Language Documents:analyze Sentiment…
   description: Provides natural language understanding technologies to extract insights from unstructured text including sentiment, entities, and syntax.
   version: v1
   contact:
@@ -33,6 +33,28 @@ paths:
       - documents:analyzeSentiment
 components:
   schemas:
+    Document:
+      type: object
+      properties:
+        type:
+          type: string
+          enum:
+          - TYPE_UNSPECIFIED
+          - PLAIN_TEXT
+          - HTML
+        content:
+          type: string
+        gcsContentUri:
+          type: string
+        language:
+          type: string
+    Sentiment:
+      type: object
+      properties:
+        magnitude:
+          type: number
+        score:
+          type: number
     AnalyzeSentimentResponse:
       type: object
       properties:
@@ -52,26 +74,4 @@ components:
         document:
           $ref: '#/components/schemas/Document'
         encodingType:
-          type: string
-    Sentiment:
-      type: object
-      properties:
-        magnitude:
-          type: number
-        score:
-          type: number
-    Document:
-      type: object
-      properties:
-        type:
-          type: string
-          enum:
-          - TYPE_UNSPECIFIED
-          - PLAIN_TEXT
-          - HTML
-        content:
-          type: string
-        gcsContentUri:
-          type: string
-        language:
           type: string

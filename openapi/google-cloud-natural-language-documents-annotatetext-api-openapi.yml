@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Google Cloud Natural Language documents:analyzeEntities Documents:annotate Text API
+  title: Google Cloud Natural Language Documents:annotate Text API
   description: Provides natural language understanding technologies to extract insights from unstructured text including sentiment, entities, and syntax.
   version: v1
   contact:
@@ -58,28 +58,20 @@ components:
           type: number
         sentiment:
           $ref: '#/components/schemas/Sentiment'
-    AnnotateTextRequest:
+    Document:
       type: object
-      required:
-      - document
-      - features
       properties:
-        document:
-          $ref: '#/components/schemas/Document'
-        features:
-          type: object
-          properties:
-            extractSyntax:
-              type: boolean
-            extractEntities:
-              type: boolean
-            extractDocumentSentiment:
-              type: boolean
-            extractEntitySentiment:
-              type: boolean
-            classifyText:
-              type: boolean
-        encodingType:
+        type:
+          type: string
+          enum:
+          - TYPE_UNSPECIFIED
+          - PLAIN_TEXT
+          - HTML
+        content:
+          type: string
+        gcsContentUri:
+          type: string
+        language:
           type: string
     Sentiment:
       type: object
@@ -111,18 +103,26 @@ components:
           type: array
           items:
             type: object
-    Document:
+    AnnotateTextRequest:
       type: object
+      required:
+      - document
+      - features
       properties:
-        type:
-          type: string
-          enum:
-          - TYPE_UNSPECIFIED
-          - PLAIN_TEXT
-          - HTML
-        content:
-          type: string
-        gcsContentUri:
-          type: string
-        language:
+        document:
+          $ref: '#/components/schemas/Document'
+        features:
+          type: object
+          properties:
+            extractSyntax:
+              type: boolean
+            extractEntities:
+              type: boolean
+            extractDocumentSentiment:
+              type: boolean
+            extractEntitySentiment:
+              type: boolean
+            classifyText:
+              type: boolean
+        encodingType:
           type: string

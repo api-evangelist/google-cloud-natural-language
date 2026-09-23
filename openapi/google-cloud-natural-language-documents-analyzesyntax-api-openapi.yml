@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Google Cloud Natural Language documents:analyzeEntities Documents:analyze Syntax API
+  title: Google Cloud Natural Language Documents:analyze Syntax API
   description: Provides natural language understanding technologies to extract insights from unstructured text including sentiment, entities, and syntax.
   version: v1
   contact:
@@ -33,15 +33,6 @@ paths:
       - documents:analyzeSyntax
 components:
   schemas:
-    AnalyzeSyntaxRequest:
-      type: object
-      required:
-      - document
-      properties:
-        document:
-          $ref: '#/components/schemas/Document'
-        encodingType:
-          type: string
     Document:
       type: object
       properties:
@@ -56,6 +47,15 @@ components:
         gcsContentUri:
           type: string
         language:
+          type: string
+    AnalyzeSyntaxRequest:
+      type: object
+      required:
+      - document
+      properties:
+        document:
+          $ref: '#/components/schemas/Document'
+        encodingType:
           type: string
     AnalyzeSyntaxResponse:
       type: object

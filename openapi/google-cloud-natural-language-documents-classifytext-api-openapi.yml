@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Google Cloud Natural Language documents:analyzeEntities Documents:classify Text API
+  title: Google Cloud Natural Language Documents:classify Text API
   description: Provides natural language understanding technologies to extract insights from unstructured text including sentiment, entities, and syntax.
   version: v1
   contact:
@@ -33,25 +33,6 @@ paths:
       - documents:classifyText
 components:
   schemas:
-    ClassifyTextResponse:
-      type: object
-      properties:
-        categories:
-          type: array
-          items:
-            type: object
-            properties:
-              name:
-                type: string
-              confidence:
-                type: number
-    ClassifyTextRequest:
-      type: object
-      required:
-      - document
-      properties:
-        document:
-          $ref: '#/components/schemas/Document'
     Document:
       type: object
       properties:
@@ -67,3 +48,22 @@ components:
           type: string
         language:
           type: string
+    ClassifyTextRequest:
+      type: object
+      required:
+      - document
+      properties:
+        document:
+          $ref: '#/components/schemas/Document'
+    ClassifyTextResponse:
+      type: object
+      properties:
+        categories:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+              confidence:
+                type: number

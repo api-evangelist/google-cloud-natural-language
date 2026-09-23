@@ -33,15 +33,6 @@ paths:
       - documents:analyzeEntities
 components:
   schemas:
-    AnalyzeEntitiesRequest:
-      type: object
-      required:
-      - document
-      properties:
-        document:
-          $ref: '#/components/schemas/Document'
-        encodingType:
-          type: string
     Entity:
       type: object
       properties:
@@ -67,21 +58,14 @@ components:
           type: number
         sentiment:
           $ref: '#/components/schemas/Sentiment'
-    Sentiment:
+    AnalyzeEntitiesRequest:
       type: object
+      required:
+      - document
       properties:
-        magnitude:
-          type: number
-        score:
-          type: number
-    AnalyzeEntitiesResponse:
-      type: object
-      properties:
-        entities:
-          type: array
-          items:
-            $ref: '#/components/schemas/Entity'
-        language:
+        document:
+          $ref: '#/components/schemas/Document'
+        encodingType:
           type: string
     Document:
       type: object
@@ -96,5 +80,21 @@ components:
           type: string
         gcsContentUri:
           type: string
+        language:
+          type: string
+    Sentiment:
+      type: object
+      properties:
+        magnitude:
+          type: number
+        score:
+          type: number
+    AnalyzeEntitiesResponse:
+      type: object
+      properties:
+        entities:
+          type: array
+          items:
+            $ref: '#/components/schemas/Entity'
         language:
           type: string
