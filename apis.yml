@@ -37,7 +37,7 @@ type: Index
 tags:
   - Entity Recognition
   - Google Cloud
-  - Machine-Learning
+  - Machine Learning
   - Natural Language Processing
   - Sentiment Analysis
   - Text Analysis
@@ -48,6 +48,7 @@ tags_raw:
   - Natural Language Processing
   - Sentiment Analysis
   - Text Analysis
+  - Machine-Learning
 apis:
 - aid: >-
     google-cloud-natural-language:google-cloud-natural-language-documents-analyzeentities-api
@@ -94,7 +95,7 @@ apis:
   - type: JSONLD
     url: json-ld/context.jsonld
 - aid: google-cloud-natural-language:google-cloud-natural-language-documents-analyzesyntax-api
-  name: Google Cloud Natural Language documents:analyzeSyntax API
+  name: Google Cloud Natural Language Documents:analyze Syntax API
   description: >-
     The documents:analyzeSyntax API from Google Cloud Natural Language — 1 operation(s) for documents:analyzesyntax.
   humanURL: https://cloud.google.com/natural-language
@@ -115,7 +116,7 @@ apis:
   - type: JSONLD
     url: json-ld/context.jsonld
 - aid: google-cloud-natural-language:google-cloud-natural-language-documents-annotatetext-api
-  name: Google Cloud Natural Language documents:annotateText API
+  name: Google Cloud Natural Language Documents:annotate Text API
   description: >-
     The documents:annotateText API from Google Cloud Natural Language — 1 operation(s) for documents:annotatetext.
   humanURL: https://cloud.google.com/natural-language
@@ -136,7 +137,7 @@ apis:
   - type: JSONLD
     url: json-ld/context.jsonld
 - aid: google-cloud-natural-language:google-cloud-natural-language-documents-classifytext-api
-  name: Google Cloud Natural Language documents:classifyText API
+  name: Google Cloud Natural Language Documents:classify Text API
   description: >-
     The documents:classifyText API from Google Cloud Natural Language — 1 operation(s) for documents:classifytext.
   humanURL: https://cloud.google.com/natural-language

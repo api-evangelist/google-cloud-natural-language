@@ -33,6 +33,33 @@ paths:
       - documents:analyzeSentiment
 components:
   schemas:
+    Sentiment:
+      type: object
+      properties:
+        magnitude:
+          type: number
+        score:
+          type: number
+    AnalyzeSentimentRequest:
+      type: object
+      required:
+      - document
+      properties:
+        document:
+          $ref: '#/components/schemas/Document'
+        encodingType:
+          type: string
+    AnalyzeSentimentResponse:
+      type: object
+      properties:
+        documentSentiment:
+          $ref: '#/components/schemas/Sentiment'
+        language:
+          type: string
+        sentences:
+          type: array
+          items:
+            type: object
     Document:
       type: object
       properties:
@@ -47,31 +74,4 @@ components:
         gcsContentUri:
           type: string
         language:
-          type: string
-    Sentiment:
-      type: object
-      properties:
-        magnitude:
-          type: number
-        score:
-          type: number
-    AnalyzeSentimentResponse:
-      type: object
-      properties:
-        documentSentiment:
-          $ref: '#/components/schemas/Sentiment'
-        language:
-          type: string
-        sentences:
-          type: array
-          items:
-            type: object
-    AnalyzeSentimentRequest:
-      type: object
-      required:
-      - document
-      properties:
-        document:
-          $ref: '#/components/schemas/Document'
-        encodingType:
           type: string
