@@ -33,13 +33,6 @@ paths:
       - documents:classifyText
 components:
   schemas:
-    ClassifyTextRequest:
-      type: object
-      required:
-      - document
-      properties:
-        document:
-          $ref: '#/components/schemas/Document'
     Document:
       type: object
       properties:
@@ -67,3 +60,10 @@ components:
                 type: string
               confidence:
                 type: number
+    ClassifyTextRequest:
+      type: object
+      required:
+      - document
+      properties:
+        document:
+          $ref: '#/components/schemas/Document'

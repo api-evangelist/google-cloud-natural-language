@@ -33,21 +33,6 @@ paths:
       - documents:analyzeSyntax
 components:
   schemas:
-    Document:
-      type: object
-      properties:
-        type:
-          type: string
-          enum:
-          - TYPE_UNSPECIFIED
-          - PLAIN_TEXT
-          - HTML
-        content:
-          type: string
-        gcsContentUri:
-          type: string
-        language:
-          type: string
     AnalyzeSyntaxRequest:
       type: object
       required:
@@ -68,5 +53,20 @@ components:
           type: array
           items:
             type: object
+        language:
+          type: string
+    Document:
+      type: object
+      properties:
+        type:
+          type: string
+          enum:
+          - TYPE_UNSPECIFIED
+          - PLAIN_TEXT
+          - HTML
+        content:
+          type: string
+        gcsContentUri:
+          type: string
         language:
           type: string

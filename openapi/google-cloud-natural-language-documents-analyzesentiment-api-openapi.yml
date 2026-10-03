@@ -33,13 +33,21 @@ paths:
       - documents:analyzeSentiment
 components:
   schemas:
-    Sentiment:
+    Document:
       type: object
       properties:
-        magnitude:
-          type: number
-        score:
-          type: number
+        type:
+          type: string
+          enum:
+          - TYPE_UNSPECIFIED
+          - PLAIN_TEXT
+          - HTML
+        content:
+          type: string
+        gcsContentUri:
+          type: string
+        language:
+          type: string
     AnalyzeSentimentRequest:
       type: object
       required:
@@ -60,18 +68,10 @@ components:
           type: array
           items:
             type: object
-    Document:
+    Sentiment:
       type: object
       properties:
-        type:
-          type: string
-          enum:
-          - TYPE_UNSPECIFIED
-          - PLAIN_TEXT
-          - HTML
-        content:
-          type: string
-        gcsContentUri:
-          type: string
-        language:
-          type: string
+        magnitude:
+          type: number
+        score:
+          type: number
