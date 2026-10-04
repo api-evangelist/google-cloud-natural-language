@@ -33,6 +33,21 @@ paths:
       - documents:annotateText
 components:
   schemas:
+    Document:
+      type: object
+      properties:
+        type:
+          type: string
+          enum:
+          - TYPE_UNSPECIFIED
+          - PLAIN_TEXT
+          - HTML
+        content:
+          type: string
+        gcsContentUri:
+          type: string
+        language:
+          type: string
     Entity:
       type: object
       properties:
@@ -58,28 +73,6 @@ components:
           type: number
         sentiment:
           $ref: '#/components/schemas/Sentiment'
-    Sentiment:
-      type: object
-      properties:
-        magnitude:
-          type: number
-        score:
-          type: number
-    Document:
-      type: object
-      properties:
-        type:
-          type: string
-          enum:
-          - TYPE_UNSPECIFIED
-          - PLAIN_TEXT
-          - HTML
-        content:
-          type: string
-        gcsContentUri:
-          type: string
-        language:
-          type: string
     AnnotateTextRequest:
       type: object
       required:
@@ -126,3 +119,10 @@ components:
           type: array
           items:
             type: object
+    Sentiment:
+      type: object
+      properties:
+        magnitude:
+          type: number
+        score:
+          type: number

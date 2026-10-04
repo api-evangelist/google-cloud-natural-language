@@ -48,15 +48,13 @@ components:
           type: string
         language:
           type: string
-    AnalyzeSentimentRequest:
+    Sentiment:
       type: object
-      required:
-      - document
       properties:
-        document:
-          $ref: '#/components/schemas/Document'
-        encodingType:
-          type: string
+        magnitude:
+          type: number
+        score:
+          type: number
     AnalyzeSentimentResponse:
       type: object
       properties:
@@ -68,10 +66,12 @@ components:
           type: array
           items:
             type: object
-    Sentiment:
+    AnalyzeSentimentRequest:
       type: object
+      required:
+      - document
       properties:
-        magnitude:
-          type: number
-        score:
-          type: number
+        document:
+          $ref: '#/components/schemas/Document'
+        encodingType:
+          type: string

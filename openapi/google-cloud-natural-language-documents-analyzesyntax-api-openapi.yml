@@ -33,28 +33,6 @@ paths:
       - documents:analyzeSyntax
 components:
   schemas:
-    AnalyzeSyntaxRequest:
-      type: object
-      required:
-      - document
-      properties:
-        document:
-          $ref: '#/components/schemas/Document'
-        encodingType:
-          type: string
-    AnalyzeSyntaxResponse:
-      type: object
-      properties:
-        sentences:
-          type: array
-          items:
-            type: object
-        tokens:
-          type: array
-          items:
-            type: object
-        language:
-          type: string
     Document:
       type: object
       properties:
@@ -69,4 +47,26 @@ components:
         gcsContentUri:
           type: string
         language:
+          type: string
+    AnalyzeSyntaxResponse:
+      type: object
+      properties:
+        sentences:
+          type: array
+          items:
+            type: object
+        tokens:
+          type: array
+          items:
+            type: object
+        language:
+          type: string
+    AnalyzeSyntaxRequest:
+      type: object
+      required:
+      - document
+      properties:
+        document:
+          $ref: '#/components/schemas/Document'
+        encodingType:
           type: string

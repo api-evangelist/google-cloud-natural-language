@@ -33,6 +33,18 @@ paths:
       - documents:classifyText
 components:
   schemas:
+    ClassifyTextResponse:
+      type: object
+      properties:
+        categories:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+              confidence:
+                type: number
     Document:
       type: object
       properties:
@@ -48,18 +60,6 @@ components:
           type: string
         language:
           type: string
-    ClassifyTextResponse:
-      type: object
-      properties:
-        categories:
-          type: array
-          items:
-            type: object
-            properties:
-              name:
-                type: string
-              confidence:
-                type: number
     ClassifyTextRequest:
       type: object
       required:
