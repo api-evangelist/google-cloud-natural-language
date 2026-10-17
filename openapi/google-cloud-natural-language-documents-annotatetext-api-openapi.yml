@@ -33,20 +33,28 @@ paths:
       - documents:annotateText
 components:
   schemas:
-    Document:
+    AnnotateTextRequest:
       type: object
+      required:
+      - document
+      - features
       properties:
-        type:
-          type: string
-          enum:
-          - TYPE_UNSPECIFIED
-          - PLAIN_TEXT
-          - HTML
-        content:
-          type: string
-        gcsContentUri:
-          type: string
-        language:
+        document:
+          $ref: '#/components/schemas/Document'
+        features:
+          type: object
+          properties:
+            extractSyntax:
+              type: boolean
+            extractEntities:
+              type: boolean
+            extractDocumentSentiment:
+              type: boolean
+            extractEntitySentiment:
+              type: boolean
+            classifyText:
+              type: boolean
+        encodingType:
           type: string
     Entity:
       type: object
@@ -73,29 +81,6 @@ components:
           type: number
         sentiment:
           $ref: '#/components/schemas/Sentiment'
-    AnnotateTextRequest:
-      type: object
-      required:
-      - document
-      - features
-      properties:
-        document:
-          $ref: '#/components/schemas/Document'
-        features:
-          type: object
-          properties:
-            extractSyntax:
-              type: boolean
-            extractEntities:
-              type: boolean
-            extractDocumentSentiment:
-              type: boolean
-            extractEntitySentiment:
-              type: boolean
-            classifyText:
-              type: boolean
-        encodingType:
-          type: string
     AnnotateTextResponse:
       type: object
       properties:
@@ -119,6 +104,21 @@ components:
           type: array
           items:
             type: object
+    Document:
+      type: object
+      properties:
+        type:
+          type: string
+          enum:
+          - TYPE_UNSPECIFIED
+          - PLAIN_TEXT
+          - HTML
+        content:
+          type: string
+        gcsContentUri:
+          type: string
+        language:
+          type: string
     Sentiment:
       type: object
       properties:
